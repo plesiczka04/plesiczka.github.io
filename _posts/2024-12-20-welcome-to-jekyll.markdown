@@ -141,7 +141,7 @@ Simulation Results (1st Initial Condition) in 3D
 ![](/assets/2ndSpectrogram.png)
 Spectrogram for 2nd Initial Condition
 
-![](/assets/2D2ndInitial.png)
+![](/assets/2D2ndInitial.gif)
 Simulation Results (2nd Initial Condition) in 2D
 
 ![](/assets/3D2ndInitial.gif)
