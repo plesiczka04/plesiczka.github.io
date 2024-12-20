@@ -9,6 +9,11 @@ categories: post
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
 </script>
 
+The motivation for this topic is because of my work and interests:
+- My study, work and research involves numerical methods and simulations
+![Caption](/assets/cfd.jpg)
+- I'm personally interested methods in DSP and numerical synthesis
+
 In many stringed instruments, strings are subjected to a restoring force applied not only by the string tension but also by the string stiffness. Although this effect is small, it adds an audible inharmonicity to the sound, which is usually desirable. Throughout the course, we have explored the wave equation along with the damped wave equation. Now, I would like to extend that partial differential equation and attempt to simulate it using a finite difference scheme. Using the works proposed by Stefan Bilbao from the University of Edinburgh and his book, *Numerical Sound Synthesis: Finite Difference Schemes and Simulation in Musical Acoustics*, I will develop a stiff string simulation model.
 
 In chapter 7 of the book, the following equation is presented:
@@ -122,8 +127,25 @@ $$
 
 where $$\(k = \frac{1}{f_s}\)$$. This result was rounded up to find the closest suitable string element, dx. Additionally, $$f_s$$ represents the sampling frequency in Hertz. The inverse of the sampling rate, k, was chosen as the time step, dt, which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figures:
 
-![Caption](/assets/frog.jpg)
-![Caption](/assets/frog.jpg)
+![Caption](/assets/2D2ndInitial.png)
+2D2ndInitial
+
+![Caption](/assets/1stSpectrogram.png)
+1stSpectrogram
+
+![Caption](/assets/2D1stInitial.gif)
+2D1stInitial
+
+![Caption](/assets/2ndSpectrogram.png)
+2ndSpectrogram
+
+![Caption](/assets/3D1stInitial.gif)
+3D1stInitial
+
+![Caption](/assets/3D2ndInitial.gif)
+3D2ndInitial
+
+
 
 [Link to book (PDF)](file:///C:/Users/plesiczka/Desktop/book.pdf)  
 [Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/)
