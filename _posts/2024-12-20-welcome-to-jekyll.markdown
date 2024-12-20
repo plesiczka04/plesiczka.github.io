@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Numerical Simulation and Synthesis of Instrument Strings with Finite Difference Schemes"
+title:  "Numerical Simulation and Synthesis of Instrument Strings with Finite Difference Schemes - Przemyslaw Lesiczka"
 date:   2024-12-20 19:27:17 +0900
 categories: post
 ---
@@ -8,19 +8,18 @@ categories: post
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
 </script>
-
-The motivation for this topic is because of my work and interests:
+This project served as my final project for the course, CTP431: Fundamentals of Computer Music. I was inspired to do this project because of a few reasons:
 ![Caption](/assets/cfd.jpg)
 - My study, work and research involves numerical methods and simulations
 - I'm personally interested methods in DSP and numerical synthesis
 
-In many stringed instruments, strings are subjected to a restoring force applied not only by the string tension but also by the string stiffness. Although this effect is small, it adds an audible inharmonicity to the sound, which is usually desirable. Throughout the course, we have explored the wave equation along with the damped wave equation. Now, I would like to extend that partial differential equation and attempt to simulate it using a finite difference scheme. Using the works proposed by Stefan Bilbao from the University of Edinburgh and his book, *Numerical Sound Synthesis: Finite Difference Schemes and Simulation in Musical Acoustics*, I will develop a stiff string simulation model.
+In many stringed instruments, strings are subjected to a restoring force applied not only by the string tension but also by the string stiffness. Although this effect is small, it adds an audible inharmonicity to the sound, which is usually desirable. Throughout the course, we have explored the wave equation along with the damped wave equation. Now, I would like to extend that partial differential equation and attempt to simulate it using a finite difference scheme. Using the works proposed by Stefan Bilbao from the University of Edinburgh and his book, *Numerical Sound Synthesis: Finite Difference Schemes and Simulation in Musical Acoustics*, I will develop a stiff string simulation model which aims to reproduce the behaviour of a guitar string.
 
 In chapter 7 of the book, the following equation is presented:
 
 $$U_{tt} = \gamma^2 u_{xx} - \kappa^2 u_{xxxx} = 0$$
 
-This equation has been proposed by many people as the partial differential model for stiff strings. However, this equation does not consider frequency-dependent loss. In guitars or pianos, the decay in higher frequencies is much quicker than in lower frequencies, as the waves traveling through the string become more rounded. In chapter 7.3 of the book, Bilbao proposes the following equation:
+This equation has been proposed by many people as the partial differential model for stiff strings. However, this equation does not consider frequency-dependent loss. In guitars, the decay in higher frequencies is much quicker than in lower frequencies, as the waves traveling through the string become more rounded. In chapter 7.3 of the book, Bilbao proposes the following equation:
 
 $$u_{tt} = \gamma^2 u_{xx} - \kappa^2 u_{xxxx} - 2\sigma_0 u_t + 2\sigma_1 u_{txx}$$
 
