@@ -53,7 +53,7 @@ This term accounts for the loss featured in the string. The first term accounts 
 
 Now that I have described the model, I would like to go in-depth into the scheme that was used to solve this equation. Firstly, the following formulation of the finite difference scheme is proposed by Bilbao:
 
-$$\delta_{tt} u = \gamma^2 \delta_{xx} u - \kappa^2 \delta_{xxxx} u - 2\sigma_0 \delta_t u + 2\sigma_1 \delta_t \delta_{xx} u$4
+$$\delta_{tt} u = \gamma^2 \delta_{xx} u - \kappa^2 \delta_{xxxx} u - 2\sigma_0 \delta_t u + 2\sigma_1 \delta_t \delta_{xx} u$$
 
 From the formulation, it is apparent that this is an implicit scheme. Using this, multiple finite difference schemes were created to approximate the equation:
 
