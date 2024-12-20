@@ -53,7 +53,7 @@ This term accounts for the loss featured in the string. The first term accounts 
 
 Now that I have described the model, I would like to go in-depth into the scheme that was used to solve this equation. Firstly, the following formulation of the finite difference scheme is proposed by Bilbao:
 
-$$\delta_{tt} u = \gamma^2 \delta_{xx} u - \kappa^2 \delta_{xxxx} u - 2\sigma_0 \delta_t u + 2\sigma_1 \delta_t \delta_{xx} u$$
+$\delta_{tt} u = \gamma^2 \delta_{xx} u - \kappa^2 \delta_{xxxx} u - 2\sigma_0 \delta_t u + 2\sigma_1 \delta_t \delta_{xx} u$
 
 From the formulation, it is apparent that this is an implicit scheme. Using this, multiple finite difference schemes were created to approximate the equation:
 
@@ -83,36 +83,36 @@ From the formulation, it is apparent that this is an implicit scheme. Using this
 
 Now, the following scheme is used to compute the position of the \(i\)-th node at the \(n+1\) timestep:
 
-$$
+$
 u^{n+1}_i = 2u^n_i - u^{n-1}_i + \Delta t^2 \left[
 \gamma u_{xx}^n - \kappa u_{xxxx}^n - 2\sigma_0 u_t^n + 2\sigma_1 u_{xx}^n
 \right]
-$$
+$
 
 Next, the boundary conditions were defined as follows:
 
-$$
+$
 u^{n+1}_0 = 0, \quad u^{n+1}_N = 0
-$$
-$$
+$
+$
 u^{n+1}_1 = u^{n+1}_0, \quad u^{n+1}_{N-1} = u^{n+1}_N
-$$
+$
 
 These are in line with the assumption of fixed boundary conditions. Therefore, the solution must have \(u=0\) and \(u_x = 0\) at the ends of the string.
 
 Before the solver could be implemented, a few more parameters had to be defined to ensure that this scheme would be stable, consistent, and convergent. Luckily, Bilbao provides these for the reader. Although in the book they are defined for the stiff string partial differential equation without frequency-dependent loss, Bilbao mentions that these schemes are valid here. The following stability condition is defined by Bilbao:
 
-$$
+$
 \lambda^2 + 4\mu^2 \leq 1
-$$
+$
 
-$$
+$
 \lambda = \frac{\gamma k}{h}
-$$
+$
 
-$$
+$
 \mu = \frac{\kappa k}{h^2}
-$$
+$
 
 Lastly, the following condition needs to be met for the spatial grid element size, \(h\):
 
