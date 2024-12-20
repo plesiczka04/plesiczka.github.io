@@ -125,25 +125,27 @@ $$
 h \geq h_{\text{min}} = \frac{\sqrt{\gamma^2 k^2 + \sqrt{\gamma^4 k^4 + 16\kappa^2 k^2}}}{2}
 $$
 
-where $$\(k = \frac{1}{f_s}\)$$. This result was rounded up to find the closest suitable string element, dx. Additionally, $$f_s$$ represents the sampling frequency in Hertz. The inverse of the sampling rate, k, was chosen as the time step, dt, which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figures:
+where $$k = \frac{1}{f_s}$$. This result was rounded up to find the closest suitable string element, dx. Additionally, $$f_s$$ represents the sampling frequency in Hertz. The inverse of the sampling rate, k, was chosen as the time step, dt, which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figures:
 
-![Caption](/assets/2D2ndInitial.png)
-2D2ndInitial
 
-![Caption](/assets/1stSpectrogram.png)
-1stSpectrogram
 
-![Caption](/assets/2D1stInitial.gif)
-2D1stInitial
+![](/assets/1stSpectrogram.png)
+Spectrogram for 1st Initial Condition
 
-![Caption](/assets/2ndSpectrogram.png)
-2ndSpectrogram
+![](/assets/2D1stInitial.gif)
+Simulation Results (1st Initial Condition) in 2D
 
-![Caption](/assets/3D1stInitial.gif)
-3D1stInitial
+![](/assets/3D1stInitial.gif)
+Simulation Results (1st Initial Condition) in 3D
 
-![Caption](/assets/3D2ndInitial.gif)
-3D2ndInitial
+![](/assets/2ndSpectrogram.png)
+Spectrogram for 2nd Initial Condition
+
+![](/assets/2D2ndInitial.png)
+Simulation Results (2nd Initial Condition) in 2D
+
+![](/assets/3D2ndInitial.gif)
+Simulation Results (2nd Initial Condition) in 3D
 
 
 
