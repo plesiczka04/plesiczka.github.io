@@ -125,8 +125,10 @@ $$
 h \geq h_{\text{min}} = \frac{\sqrt{\gamma^2 k^2 + \sqrt{\gamma^4 k^4 + 16\kappa^2 k^2}}}{2}
 $$
 
-where $$k = \frac{1}{f_s}$$. This result was rounded up to find the closest suitable string element, dx. Additionally, $$f_s$$ represents the sampling frequency in Hertz. The inverse of the sampling rate, k, was chosen as the time step, dt, which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figures:
+where $$k = \frac{1}{f_s}$$. This result was rounded up to find the closest suitable string element, dx. Additionally, $$f_s$$ represents the sampling frequency in Hertz. The inverse of the sampling rate, k, was chosen as the time step, dt, which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figure:
+![](/assets/ics.png)
 
+With the initial conditions now defined, everything was ready to run the simulation. A sampling frequency of 88400 Hz was used which results in a string segment length of approximately 6.5mm. All of the code was implemented with Pytorch in Python to allow the simulations to be solved using CUDA. Each of the simulations took approximately 3 minutes to generate, using the Nvidia A100 GPU. The GPU was accessed through Google Colab. The animations which are presented below took about 3-5 minutes each to generate. A total duration of 2 seconds was used for the simulation. To complete the simulation of the guitar string, all of the geometric and physical parameters were sourced from this website: [Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/), which served as a major resourve for all of the parameters. 
 
 
 ![](/assets/1stSpectrogram.png)
@@ -147,4 +149,5 @@ Simulation Results (2nd Initial Condition) in 2D
 ![](/assets/3D2ndInitial.gif)
 Simulation Results (2nd Initial Condition) in 3D
 
-A major resource for writing this project was the book [Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/)
+As it can be clearly seen from the spectrograms, the results between the two simulations are not that different and there is no distinguishable harmonics in the spectrogram. Due to the long simulation time and this low quality, the code implementation was deemed not good enough for real time synthesis, which was the original goal of this project. Any attempts to generate sounds with this method were not greatly successful.
+
