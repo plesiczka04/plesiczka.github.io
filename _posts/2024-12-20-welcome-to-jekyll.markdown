@@ -123,8 +123,8 @@ $$
 
 where $$\(k = \frac{1}{f_s}\)$$. This result was rounded up to find the closest suitable string element, dx. Additionally, $$f_s$$ represents the sampling frequency in Hertz. The inverse of the sampling rate, k, was chosen as the time step, dt, which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figures:
 
-![Caption](../assets/frog.jpg)
-![Caption](../assets/frog.jpg)
+![Caption](/assets/frog.jpg)
+![Caption](/assets/frog.jpg)
 
 [Link to book (PDF)](file:///C:/Users/plesiczka/Desktop/book.pdf)  
 [Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/)
