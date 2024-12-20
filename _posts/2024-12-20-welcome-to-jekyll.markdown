@@ -59,71 +59,71 @@ From the formulation, it is apparent that this is an implicit scheme. Using this
 
 - The second derivative is approximated as:
 
-  \[
+  $$
   u_{xx} = \frac{u_{i-1} - 2u_i + u_{i+1}}{\Delta x^2}
-  \]
+  $$
 
 - The fourth derivative is approximated as:
 
-  \[
+  $$
   u_{xxxx} = \frac{u_{i-2} - 4u_{i-1} + 6u_i - 4u_{i+1} + u_{i+2}}{\Delta x^4}
-  \]
+  $$
 
 - The first time derivative is computed as:
 
-  \[
+  $$
   u_t = \frac{u^n - u^{n-1}}{\Delta t}
-  \]
+  $$
 
 - The second time derivative is approximated as:
 
-  \[
+  $$
   u_{tt} = \frac{u^{n+1} - 2u^n + u^{n-1}}{\Delta t^2}
-  \]
+  $$
 
 Now, the following scheme is used to compute the position of the \(i\)-th node at the \(n+1\) timestep:
 
-\[
+$$
 u^{n+1}_i = 2u^n_i - u^{n-1}_i + \Delta t^2 \left[
 \gamma u_{xx}^n - \kappa u_{xxxx}^n - 2\sigma_0 u_t^n + 2\sigma_1 u_{xx}^n
 \right]
-\]
+$$
 
 Next, the boundary conditions were defined as follows:
 
-\[
+$$
 u^{n+1}_0 = 0, \quad u^{n+1}_N = 0
-\]
-\[
+$$
+$$
 u^{n+1}_1 = u^{n+1}_0, \quad u^{n+1}_{N-1} = u^{n+1}_N
-\]
+$$
 
 These are in line with the assumption of fixed boundary conditions. Therefore, the solution must have \(u=0\) and \(u_x = 0\) at the ends of the string.
 
 Before the solver could be implemented, a few more parameters had to be defined to ensure that this scheme would be stable, consistent, and convergent. Luckily, Bilbao provides these for the reader. Although in the book they are defined for the stiff string partial differential equation without frequency-dependent loss, Bilbao mentions that these schemes are valid here. The following stability condition is defined by Bilbao:
 
-\[
+$$
 \lambda^2 + 4\mu^2 \leq 1
-\]
+$$
 
-\[
+$$
 \lambda = \frac{\gamma k}{h}
-\]
+$$
 
-\[
+$$
 \mu = \frac{\kappa k}{h^2}
-\]
+$$
 
 Lastly, the following condition needs to be met for the spatial grid element size, \(h\):
 
-\[
+$$
 h \geq h_{\text{min}} = \frac{\sqrt{\gamma^2 k^2 + \sqrt{\gamma^4 k^4 + 16\kappa^2 k^2}}}{2}
-\]
+$$
 
 where \(k = \frac{1}{f_s}\). This result was rounded up to find the closest suitable string element, \(dx\). Additionally, \(f_s\) represents the sampling frequency in Hertz. The inverse of the sampling rate, \(k\), was chosen as the time step, \(dt\), which was used for the simulation of the string. The last element needed to approximate a solution to this differential equation was to set the initial conditions of the wave. Two initial waves were created: a half-sine wave and a triangular initial condition. These initial conditions are plotted in the following figures:
 
-![Caption](frog.jpg)
-![Caption](frog.jpg)
+![Caption](../assets/frog.jpg)
+![Caption](../assets/frog.jpg)
 
 [Link to book (PDF)](file:///C:/Users/plesiczka/Desktop/book.pdf)  
 [Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/)
