@@ -149,5 +149,7 @@ Simulation Results (2nd Initial Condition) in 2D
 ![](/assets/3D2ndInitial.gif)
 Simulation Results (2nd Initial Condition) in 3D
 
-As it can be clearly seen from the spectrograms, the results between the two simulations are not that different and there is no distinguishable harmonics in the spectrogram. Due to the long simulation time and this low quality, the code implementation was deemed not good enough for real time synthesis, which was the original goal of this project. Any attempts to generate sounds with this method were not greatly successful.
+As it can be clearly seen from the spectrograms, the results between the two simulations are not that different and there is no distinguishable harmonics in the spectrogram. Due to the long simulation time and this low quality, the code implementation was deemed not good enough for real time synthesis, which was the original goal of this project. Any attempts to generate sounds with this method were not greatly successful. Therefore, the generated sounds are not presented here.
+
+In summary, the general simulation of the guitar string was quite successful but the synthesis aspect unfortunately left a lot to be desired. 
 
