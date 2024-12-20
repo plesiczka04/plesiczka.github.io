@@ -4,7 +4,6 @@ title:  "Numerical Simulation and Synthesis of Instrument Strings with Finite Di
 date:   2024-12-20 19:27:17 +0900
 categories: post
 ---
-# Your Paper
 
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
