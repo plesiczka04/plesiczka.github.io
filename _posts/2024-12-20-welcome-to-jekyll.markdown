@@ -147,7 +147,4 @@ Simulation Results (2nd Initial Condition) in 2D
 ![](/assets/3D2ndInitial.gif)
 Simulation Results (2nd Initial Condition) in 3D
 
-
-
-[Link to book (PDF)](file:///C:/Users/plesiczka/Desktop/book.pdf)  
-[Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/)
+A major resource for writing this project was the book [Physics of Guitar Strings](https://protonsforbreakfast.wordpress.com/2022/01/24/the-physics-of-guitar-strings/)
