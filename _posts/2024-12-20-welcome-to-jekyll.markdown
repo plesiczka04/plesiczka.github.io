@@ -10,8 +10,8 @@ categories: post
 </script>
 
 The motivation for this topic is because of my work and interests:
-- My study, work and research involves numerical methods and simulations
 ![Caption](/assets/cfd.jpg)
+- My study, work and research involves numerical methods and simulations
 - I'm personally interested methods in DSP and numerical synthesis
 
 In many stringed instruments, strings are subjected to a restoring force applied not only by the string tension but also by the string stiffness. Although this effect is small, it adds an audible inharmonicity to the sound, which is usually desirable. Throughout the course, we have explored the wave equation along with the damped wave equation. Now, I would like to extend that partial differential equation and attempt to simulate it using a finite difference scheme. Using the works proposed by Stefan Bilbao from the University of Edinburgh and his book, *Numerical Sound Synthesis: Finite Difference Schemes and Simulation in Musical Acoustics*, I will develop a stiff string simulation model.
@@ -47,7 +47,7 @@ This inclusion in the equation could be interpreted as the resistance of the str
 - $$\rho$$ [$$kg/m^3$$]: The material density
 - A [$$m^2$$]: The string cross-sectional area
 - L [m]: The string length
-- c [Pa]: Wave propagation speed
+- c [m/s]: Wave propagation speed
 
 Lastly, to make this conceptual analysis of the partial differential equation complete, the following term is presented:
 
@@ -103,7 +103,7 @@ $$
 u^{n+1}_1 = u^{n+1}_0, \quad u^{n+1}_{N-1} = u^{n+1}_N
 $$
 
-These are in line with the assumption of fixed boundary conditions. Therefore, the solution must have u=0 and $$u_x = 0$$ at the ends of the string.
+These are in line with the assumption of fixed boundary conditions which were used here to simulate a clamped guitar strign. Therefore, the solution must have u=0 and $$u_x = 0$$ at the ends of the string.
 
 Before the solver could be implemented, a few more parameters had to be defined to ensure that this scheme would be stable, consistent, and convergent. Luckily, Bilbao provides these for the reader. Although in the book they are defined for the stiff string partial differential equation without frequency-dependent loss, Bilbao mentions that these schemes are valid here. The following stability condition is defined by Bilbao:
 
