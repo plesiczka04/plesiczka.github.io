@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Project post"
-date:   
-categories: 
+date:   2024-12-20 19:27:17 +0900
+categories: post
 ---
 # Your Paper
 
