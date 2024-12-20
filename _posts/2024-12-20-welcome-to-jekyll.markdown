@@ -38,12 +38,12 @@ $$\kappa = \sqrt{\frac{EI}{\rho A L^4}}$$
 
 This inclusion in the equation could be interpreted as the resistance of the string to the local bending that it is subjected to. The following parameters are defined here:
 
-- \(E\) \([Pa]\): Young's Modulus of Elasticity
-- \(I\) \([m^4]\): Moment of Inertia (of the circular string cross-section)
-- \(\rho\) \([kg/m^3]\): The material density
-- \(A\) \([m^2]\): The string cross-sectional area
-- \(L\) \([m]\): The string length
-- \(c\) \([Pa]\): Wave propagation speed
+- E [Pa]: Young's Modulus of Elasticity
+- I [$$m^4$$]: Moment of Inertia (of the circular string cross-section)
+- $$\rho$$ [$$kg/m^3$$]: The material density
+- A [$$m^2$$]: The string cross-sectional area
+- L [m]: The string length
+- c [Pa]: Wave propagation speed
 
 Lastly, to make this conceptual analysis of the partial differential equation complete, the following term is presented:
 
