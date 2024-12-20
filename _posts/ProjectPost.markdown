@@ -6,6 +6,10 @@ categories: post
 ---
 # Your Paper
 
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+</script>
+
 In many stringed instruments, strings are subjected to a restoring force applied not only by the string tension but also by the string stiffness. Although this effect is small, it adds an audible inharmonicity to the sound, which is usually desirable. Throughout the course, we have explored the wave equation along with the damped wave equation. Now, I would like to extend that partial differential equation and attempt to simulate it using a finite difference scheme. Using the works proposed by Stefan Bilbao from the University of Edinburgh and his book, *Numerical Sound Synthesis: Finite Difference Schemes and Simulation in Musical Acoustics*, I will develop a stiff string simulation model.
 
 In chapter 7 of the book, the following equation is presented:
