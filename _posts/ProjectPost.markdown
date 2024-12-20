@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Project post"
+title:  "Numerical Simulation and Synthesis of Instrument Strings with Finite Difference Schemes"
 date:   2024-12-20 19:27:17 +0900
 categories: post
 ---
