@@ -93,7 +93,7 @@ Next, the boundary conditions were defined as follows:
 
 $
 u^{n+1}_0 = 0, \quad u^{n+1}_N = 0
-$
+$ \n
 $
 u^{n+1}_1 = u^{n+1}_0, \quad u^{n+1}_{N-1} = u^{n+1}_N
 $
